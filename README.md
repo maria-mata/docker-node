@@ -11,7 +11,7 @@ Follow these steps to build a simple Docker app in Node. Note that Node does not
   * The `api` service should use the `node` image with the `17-alpine3.12` tag
   * The `api` service should have a volume that maps the `app` folder in the project to the `/app` folder inside the container
   * The `api` service should map port 443 inside the container to port 3000 on the host
-  * The `api` service should establish an environment variable named `HOME` that's set to the city you live in
+  * The `api` service should establish an environment variable named `HOMETOWN` that's set to the city you live in
   * The `api` service should run the command `npm install && npm start` by default
 4. Scaffold out the app with `docker-compose run -u $(id -u):$(id -g) api sh -c "cd /app && npm init -y"`
 5. Install `express` and `nodemon` in the project with `docker-compose run -u $(id -u):$(id -g) api sh -c "cd /app && npm install express nodemon"`
