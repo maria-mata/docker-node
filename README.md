@@ -8,7 +8,7 @@ Follow these steps to build a simple Docker app in Node. Note that Node does not
 2. Make a blank file in it called `docker-compose.yml`.
 3. Make an empty folder in it called `app`
 3. Make an empty file in the `app` folder called `package.json`
-4. Add the following content to it:
+4. Add the following content to the `docker-compose.yml` file:
   * A top-level key called `services`, with a key under that called `api`
   * The `api` service should use the `node` image with the `17-alpine3.12` tag
   * The `api` service should have a volume that maps the `app` folder in the project to the `/app` folder inside the container
