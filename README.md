@@ -28,7 +28,7 @@ const app = express()
 
 app.get("/", (request, response) => {
   response.json({
-    message: "This API is working!",
+    message: `Hello, ${process.env.HOME}!`,
   })
 })
 
