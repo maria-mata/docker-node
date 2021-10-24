@@ -28,7 +28,7 @@ const app = express()
 
 app.get("/", (request, response) => {
   response.json({
-    message: `Hello, ${process.env.HOME}!`,
+    message: `Hello, ${process.env.HOMETOWN}!`,
   })
 })
 
