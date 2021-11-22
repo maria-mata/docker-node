@@ -1,0 +1,18 @@
+version: '3'
+services:
+  api:
+    image: node:12.19
+    volumes:
+      - ./app:/app
+    environment:
+      - HOMETOWN=Denver
+    command: [ 'sh', '-c', 'cd app && yarn && yarn start' ]
+    expose:
+      - '443'
+  web:
+    image: node:12.19
+    volumes:
+      - ./web:/app
+    ports:
+      - '3000:3000'
+    command: [ 'sh', '-c', 'cd app && npx lite-server' ]
